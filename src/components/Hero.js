@@ -11,7 +11,7 @@ function Hero({ movies }) {
   if (!movies) return <h1>LOADING</h1>;
   const movie = movies
     .results[Math.floor(Math.random() * movies.results.length)];
-    
+
   return (
     <HeroContainer background={movie?.backdrop_path}>
       <HeroTitle>{movie?.name}</HeroTitle>

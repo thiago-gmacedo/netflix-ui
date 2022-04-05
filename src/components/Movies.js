@@ -14,28 +14,28 @@ const Movies = ({ movies, title }) => {
             alt={movie.title}
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           />
-        ))}
+        ))};
       </MoviesRow>
     </MoviesContainer>
   );
-}
+};
 
 export default Movies;
 
 Movies.propTypes = {
   title: PropTypes.string.isRequired,
-  movies: PropTypes.Shape({
+  movies: PropTypes.shape({
     page: PropTypes.number.isRequired,
     total_results: PropTypes.number.isRequired,
     total_pages: PropTypes.number.isRequired,
     results: PropTypes.arrayOf(
-      PropTypes.Shape({
+      PropTypes.shape({
         id: PropTypes.number.isRequired,
         title: PropTypes.string.isRequired,
         overview: PropTypes.string.isRequired,
         poster_path: PropTypes.string.isRequired,
         backdrop_path: PropTypes.string.isRequired,
-      })
+      }),
     ).isRequired,
-  })
+  }),
 };
