@@ -6,7 +6,7 @@ const API_KEY = "069aebc50919d2587528155d3058737f";
 
 const useFetch = () => {
   const [data, setData] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   
   useEffect(() => {
     setIsLoading(true);
@@ -18,7 +18,7 @@ const useFetch = () => {
       });
     });
     setIsLoading(false);
-  }, [URL]);
+  }, []);
   return { data, isLoading };
 };
 
