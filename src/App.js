@@ -1,4 +1,8 @@
+import useFetch from "./hooks/useFetch";
+
 function App() {
+  const {data, isLoading} = useFetch();
+  console.log(data, isLoading)
   return (
     <>
       <h1>
