@@ -1,3 +1,4 @@
+import React from "react";
 import useFetch from "./hooks/useFetch";
 import Movies from "./components/Movies";
 import Hero from "./components/Hero";
