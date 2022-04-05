@@ -1,11 +1,13 @@
 import useFetch from "./hooks/useFetch";
 import Movies from "./components/Movies";
+import Hero from "./components/Hero";
 
 function App() {
   const {data, isLoading} = useFetch();
   
   return (
     <>
+      <Hero movies={data.originals} />
       <Movies title="Netflix originals" movies={data.originals} />
       <Movies title="Trending" movies={data.trending} />
       <Movies title="Now playing" movies={data.now_playing} />
