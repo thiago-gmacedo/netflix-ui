@@ -1,13 +1,12 @@
 import useFetch from "./hooks/useFetch";
+import Movies from "./components/Movies";
 
 function App() {
   const {data, isLoading} = useFetch();
   
   return (
     <>
-      <h1>
-        Initial commit
-      </h1>
+      <Movies title="Netflix originals" movies={data.originals} />
     </>
   );
 }
