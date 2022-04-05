@@ -4,8 +4,8 @@ export const HeroContainer = styled.div`
   ${tw`
     p-8
   `}
-  height: 80vh
-  background-size: cover !important;
+  min-height: 80vh
+  background-size: center !important;
   background-position: center !important;
 
   ${(props) =>
@@ -27,6 +27,7 @@ export const HeroDescription = styled.p`
     font-medium
     text-lg
     mb-4
+    min-h-0
   `}
 
   width: 45rem;
